@@ -35,7 +35,17 @@ Aplikasi ini adalah sistem pendaftaran online untuk siswa baru yang dirancang un
        app.config['MYSQL_PASSWORD'] = 'your_password'
        app.config['MYSQL_DB'] = 'sekolah'
        ```
-   - Jalankan aplikasi:
+
+3. **Mengimpor Database melalui phpMyAdmin:**
+   - Masuk ke phpMyAdmin menggunakan browser Anda.
+   - Pilih database `sekolah` atau buat database baru dengan nama tersebut.
+   - Klik pada tab **Import**.
+   - Klik **Choose File** dan pilih file SQL yang akan diimpor (misalnya, `sekolah.sql`).
+   - Pastikan format file adalah SQL dan klik **Go**.
+   - Tunggu hingga proses impor selesai. Data dan struktur tabel akan ditambahkan ke database.
+
+4. **Menjalankan Aplikasi:**
+   - Jalankan aplikasi dengan perintah berikut:
      ```bash
      python app.py
      ```
@@ -44,3 +54,15 @@ Aplikasi ini adalah sistem pendaftaran online untuk siswa baru yang dirancang un
 - **app.py:** File utama aplikasi yang mengatur routing dan logika aplikasi.
 - **templates/:** Folder berisi file HTML untuk tampilan antarmuka pengguna.
 - **static/:** Folder untuk file statis seperti CSS, JavaScript, dan gambar.
+
+## Penggunaan
+1. **Akses Admin:**
+   - Buka halaman login dan masukkan kredensial admin yang telah disediakan.
+   - Akses berbagai fitur untuk mengelola pendaftaran siswa.
+
+2. **Pendaftaran Siswa:**
+   - Siswa dapat mengisi formulir pendaftaran online dan mengunggah dokumen yang diperlukan.
+
+3. **Verifikasi dan Konfirmasi:**
+   - Admin memverifikasi dokumen pendaftaran.
+   - Setelah verifikasi, email konfirmasi akan dikirim ke calon siswa.
