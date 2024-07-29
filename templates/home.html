@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+    <div class="home-container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/tut wuri handayani.jpg') }}" alt="logo sekolah">
+        </div>
+        <a class="submit-button" href="{{ url_for('form') }}">DAFTAR SEKARANG</a>
+    </div>
+    <div id="tentang" class="tentang-container">
+        <h2>Tentang Sekolah</h2>
+        <p>Informasi tentang sekolah...</p>
+    </div>
+{% endblock %}

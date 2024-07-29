@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Data Pendaftaran{% endblock %}
+
+{% block content %}
+    <div class="result-container">
+        <h2>Data Pendaftaran</h2>
+        <p>Nama Pendaftar: {{ nama_pendaftar }}</p>
+        <p>Tanggal Lahir: {{ tanggal_lahir }}</p>
+        <p>Alamat Email: {{ alamat_email }}</p>
+        <p>Nomor Aktif/WA: {{ nomor_aktif }}</p>
+        <p>Alamat Rumah: {{ alamat_rumah }}</p>
+        <p>Detail Ortu/Wali: {{ detail_ortu }}</p>
+        <a href="{{ url_for('form') }}" class="submit-button">Kembali ke Formulir</a>
+        <a href="{{ url_for('download_word', nama_pendaftar=nama_pendaftar, tanggal_lahir=tanggal_lahir, alamat_email=alamat_email, nomor_aktif=nomor_aktif, alamat_rumah=alamat_rumah, detail_ortu=detail_ortu) }}" class="submit-button">Unduh sebagai Word</a>
+    </div>
+{% endblock %}
